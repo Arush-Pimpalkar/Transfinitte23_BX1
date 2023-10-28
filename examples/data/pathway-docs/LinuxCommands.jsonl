@@ -1,0 +1,174 @@
+{"doc":"command name: *","description":"Wildcard symbol for variable length, e.g., *.txt refers to all files with the TXT extension"}
+{"doc":"command name: ?","description":"Wildcard symbol referring to a single character, e.g., Doc?.docx can refer to Doc1.docx, DocA.docx, etc."}
+{"doc":"command name: ls","description":"List the names of files and subfolders in the current directory. Options include -l, -a, -t which you may combine, e.g., -alt."}
+{"doc":"command name: ls -l","description":"Also show details of each item displayed, such as user permissions and the time/date when the item was last modified"}
+{"doc":"command name: ls -a","description":"Also display hidden files/folders. May be combined with ls -l to form ls -al."}
+{"doc":"command name: ls -t","description":"Sort the files/folders according to the last modified time/date, starting with the most recently modified item"}
+{"doc":"command name: ls X","description":"List the files"}
+{"doc":"command name: cd Y","description":"Change directory to Y. Special instances of Y: . \u2014 current directory .. \u2014 parent directory"}
+{"doc":"command name: cd","description":"To the $HOME directory"}
+{"doc":"command name: cd ..","description":"Up one level to enclosing folder or parent directory"}
+{"doc":"command name: cd /etc","description":"To the /etc directory"}
+{"doc":"command name: cmp A B","description":"Compare two files A and B for sameness. No output if A and B are identical, outputs character and line number otherwise."}
+{"doc":"command name: diff A B","description":"Compare two files A and B for differences. Outputs the difference."}
+{"doc":"command name: pwd","description":"Display the path of the current working directory."}
+{"doc":"command name: mkdir X","description":"Make a new directory named X inside the current directory."}
+{"doc":"command name: mv A B","description":"Move a file from path A to path B. Also used for renaming files. Examples: - Moving between directories folder1 and folder2: mv ./folder1/file.txt ./folder2 The file name will remain unchanged, and its new path will be ./folder2/file.txt. - Renaming a file: mv new_doc.txt expenses.txt The new file name is expenses.txt."}
+{"doc":"command name: cp A B","description":"Copy a file from path A to path B. Usage similar to mv both in moving to a new directory and simultaneously renaming the file in its new location. Example: cp ./f1/file.txt ./f2/expenses.txt simultaneously copies the file file.txt to the new location with a new name expenses.txt."}
+{"doc":"command name: cp -r Y Z","description":"Recursively copy a directory Y and its contents to Z. If Z exists, copy source Y into it; otherwise, create Z and Y becomes its subdirectory with Y\u2019s contents"}
+{"doc":"command name: rm X","description":"Remove (delete) X permanently."}
+{"doc":"command name: rm -r Y","description":"Recursively delete a directory Y and its contents"}
+{"doc":"command name: rm -f X","description":"Forcibly remove file X without prompts or confirmation"}
+{"doc":"command name: rm -rf Y","description":"Forcibly remove directory Y and its contents recursively"}
+{"doc":"command name: rmdir Y","description":"Remove a directory Y permanently, provided Y is empty."}
+{"doc":"command name: open X","description":"Open X in its default program."}
+{"doc":"command name: open -e X","description":"Opens X in the default text editor (macOS: TextEdit)"}
+{"doc":"command name: touch X","description":"Create an empty file X or update the access and modification times of X."}
+{"doc":"command name: cat X","description":"View contents of X."}
+{"doc":"command name: cat -b X","description":"Also display line numbers as well."}
+{"doc":"command name: wc X","description":"Display word count of X."}
+{"doc":"command name: head X","description":"Display the first 10 lines of X. If more than a single file is specified, each file is preceded by a header consisting of the string \"==> X <=='' where \"X'' is the name of the file."}
+{"doc":"command name: head -n 4 X","description":"Show the first 4 lines of X."}
+{"doc":"command name: ls *.c | head -n 5","description":"Display the first 5 items of a list of *.c files in the current directory."}
+{"doc":"command name: tail X","description":"Display the last (10, by default) lines of X. If more than a single file is specified, each file is preceded by a header consisting of the string \"==> X <=='' where \"X'' is the name of the file."}
+{"doc":"command name: tail -n +1 X","description":"Display entire contents of the file(s) X specified, with header of respective file names"}
+{"doc":"command name: tail -f X","description":"Display the last 10 lines of the file(s) X specified, and track changes appended to them at the end. Overwriting X or modifying X with a text editor such as vim would mess up this command\u2019s output."}
+{"doc":"command name: less","description":"Read a file with forward and backward navigation. Often used with pipe, e.g., cat file.txt | less"}
+{"doc":"command name: ln -s A S","description":"Create symbolic link of path A to link name S."}
+{"doc":"command name: echo TEXT","description":"Display a line of TEXT or the contents of a variable."}
+{"doc":"command name: echo -e TEXT","description":"Also interprets escape characters in TEXT, e.g., \\n → new line, \\b → backslash, \\t → tab."}
+{"doc":"command name: echo -n TEXT","description":"Omits trailing newline of TEXT."}
+{"doc":"command name: cmd1 | cmd2","description":"| is the pipe character; feeds the output of the command cmd1 and sends it to the command cmd2, e.g., ps aux | grep python3."}
+{"doc":"command name: cmd > file","description":"Redirect output of a command cmd to a file file. Overwrites pre-existing content of file."}
+{"doc":"command name: cmd >& file","description":"Redirect output of cmd to file. Overwrites pre-existing content of file. Suppresses the output of cmd."}
+{"doc":"command name: cmd > /dev/null","description":"Suppress the output of cmd."}
+{"doc":"command name: cmd >> file","description":"Append output of cmd to file."}
+{"doc":"command name: cmd < file","description":"Read input of cmd from file."}
+{"doc":"command name: cmd << delim","description":"Read input of cmd from the standard input with the delimiter character delim to tell the system where to terminate the input. Example for counting the number of lines of ad-hoc input: wc -l << EOF > I like > apples > and > oranges. > EOF 4 Hence there are only 4 lines in the standard input delimited by EOF."}
+{"doc":"command name: cmd <<< string","description":"Input a text string to cmd."}
+{"doc":"command name: cmd 2> foo","description":"Redirect error messages of cmd to foo."}
+{"doc":"command name: cmd 2>> foo","description":"Append error messages of cmd to foo."}
+{"doc":"command name: cmd &> file","description":"Redirect output and error messages of cmd to file."}
+{"doc":"command name: grep patt /path/to/src","description":"Search for a text pattern patt in X. Commonly used with pipe e.g., ps aux | grep python3 filters out the processes containing python3 from all running processes of all users."}
+{"doc":"command name: grep -r patt /path/to/src","description":"Search recursively (the target directory /path/to/src and its subdirectories) for a text pattern patt."}
+{"doc":"command name: grep -v patt X","description":"Return lines in X not matching the specified patt."}
+{"doc":"command name: grep -l patt X","description":"Write to standard output the names of files containing patt."}
+{"doc":"command name: grep -i patt X","description":"Perform case-insensitive matching on X. Ignore the case of patt."}
+{"doc":"command name: find","description":"Find files."}
+{"doc":"command name: find /path/to/src -name \"*.sh\"","description":"Find all files in /path/to/src matching the pattern \"*.sh\" in the file name."}
+{"doc":"command name: find /home -size +100M","description":"Find all files in the /home directory larger than 100MB."}
+{"doc":"command name: locate name","description":"Find files and directories by name."}
+{"doc":"command name: sort X","description":"Arrange lines of text in X alphabetically or numerically."}
+{"doc":"command name: tar","description":"Manipulate archives with .tar extension."}
+{"doc":"command name: tar -v","description":"Get verbose output while manipulating TAR archives. May combine this option with others, e.g., tar -tvf."}
+{"doc":"command name: tar -cf archive.tar Y","description":"Create a TAR archive named archive.tar containing Y."}
+{"doc":"command name: tar -xf archive.tar","description":"Extract the TAR archive named archive.tar."}
+{"doc":"command name: tar -tf archive.tar","description":"List contents of the TAR archive named archive.tar."}
+{"doc":"command name: tar -czf archive.tar.gz Y","description":"Create a gzip-compressed TAR archive named archive.tar.gz containing Y."}
+{"doc":"command name: tar -xzf archive.tar.gz","description":"Extract the gzip-compressed TAR archive named archive.tar.gz."}
+{"doc":"command name: tar -cjf archiave.tar.bz2 Y","description":"Create a bzip2-compressed TAR archive named archive.tar.bz2 containing Y."}
+{"doc":"command name: tar -xjf archive.tar.bz2","description":"Extract the bzip2-compressed TAR archive named archive.tar.bz2."}
+{"doc":"command name: gzip","description":"Manipulate archives with .gz extension."}
+{"doc":"command name: gzip Y","description":"Create a gzip archive named Y.gz containing Y."}
+{"doc":"command name: gzip -l Y.gz","description":"List contents of gzip archive Y.gz."}
+{"doc":"command name: gzip -d Y.gz gunzip Y.gz","description":"Extract Y.gz and recover the original file Y."}
+{"doc":"command name: bzip2","description":"Manipulate archives with .bz2 extension."}
+{"doc":"command name: bzip2 Y","description":"Create a bzip2 archive named Y.bz2 containing Y."}
+{"doc":"command name: bzip2 -d Y.gz bunzip2 Y.gz","description":"Extract Y.bz2 and recover the original file Y."}
+{"doc":"command name: zip -r Z.zip Y","description":"Zip Y to the ZIP archive Z.zip."}
+{"doc":"command name: unzip Z.zip","description":"Unzip Z.zip to the current directory."}
+{"doc":"command name: unzip Z.zip","description":"List contents of Z.zip."}
+{"doc":"command name: ssh user@access","description":"Connect to access as user."}
+{"doc":"command name: ssh access","description":"Connect to access as your local username."}
+{"doc":"command name: ssh -p port user@access","description":"Connect to access as user using port."}
+{"doc":"command name: scp [user1@]host1:[path1] [user2@]host2:[path2]","description":"Login to hostN as userN via secure copy protocol for N=1,2. Example usage: scp alice@pi:/home/source bob@arduino:/destination path1 and path2 may be local or remote, but ensure they\u2019re absolute rather than relative paths, e.g., /var/www/*.html, /usr/bin. If user1 and user2 are not specified, scp will use your local username."}
+{"doc":"command name: scp -P port [user1@]host1:[path1] [user2@]host2:[path2]","description":"Connect to hostN as userN using port for N=1,2."}
+{"doc":"command name: scp -r [user1@]host1:[path1] [user2@]host2:[path2]","description":"Recursively copy all files and directories from path1 to path2."}
+{"doc":"command name: sftp [user@]access","description":"Login to access as user via secure file transfer protocol. If user is not specified, your local username will be used."}
+{"doc":"command name: sftp access","description":"Connect to access as your local username."}
+{"doc":"command name: sftp -P port user@access","description":"Connect to access as user using port."}
+{"doc":"command name: rsync -a [path1] [path2]","description":"Synchronize [path1] to [path2], preserving symbolic links, attributes, permissions, ownerships, and other settings."}
+{"doc":"command name: rsync -avz host1:[path1] [path2]","description":"Synchronize [path1] on the remote host host1 to the local path [path2], preserving symbolic links, attributes, permissions, ownerships, and other settings. It also compresses the data involved during the transfer."}
+{"doc":"command name: chmod permission file","description":"Change permissions of a file or directory. Permissions may be of the form [u/g/o/a][+/-/=][r/w/x] (see examples below) or a three-digit octal number."}
+{"doc":"command name: chown user2 file","description":"Change the owner of a file to user2."}
+{"doc":"command name: chgrp group2 file","description":"Change the group of a file to group2."}
+{"doc":"command name: uname","description":"Show the Linux system information."}
+{"doc":"command name: uname -a","description":"Detailed Linux system information"}
+{"doc":"command name: uname -r","description":"Kernel release information, such as kernel version"}
+{"doc":"command name: uptime","description":"Show how long the system is running and load information."}
+{"doc":"command name: su sudo","description":"Superuser; use this before a command that requires root access e.g., su shutdown"}
+{"doc":"command name: cal","description":"Show calendar where the current date is highlighted."}
+{"doc":"command name: date","description":"Show the current date and time of the machine."}
+{"doc":"command name: halt","description":"Stop the system immediately."}
+{"doc":"command name: shutdown","description":"Shut down the system."}
+{"doc":"command name: reboot","description":"Restart the system."}
+{"doc":"command name: last reboot","description":"Show reboot history."}
+{"doc":"command name: man COMMAND","description":"Shows the manual for a given COMMAND. To exit the manual, press \u201cq\u201d."}
+{"doc":"command name: hostname","description":"Show system host name"}
+{"doc":"command name: hostname -I","description":"Display IP address of host"}
+{"doc":"command name: cat /etc/*-release","description":"Show the version of the Linux distribution installed. For example, if you\u2019re using Red Hat Linux, you may replace * with redhat."}
+{"doc":"command name: dmesg","description":"Display messages in kernel ring buffer (data structure that records messages related to the operation of the program running the operating system)"}
+{"doc":"command name: cat /proc/cpuinfo","description":"Display information about the central processing unit (CPU)"}
+{"doc":"command name: cat /proc/meminfo","description":"Display memory information"}
+{"doc":"command name: lspci -tv","description":"Displays information about each Peripheral Component Interconnect (PCI) device on your system. The option -t outputs the information as a tree diagram, and -v is for verbose output."}
+{"doc":"command name: lsusb -tv","description":"Display information about Universal Serial Bus (USB) devices and the devices connected to them. The option -t outputs the information as a tree diagram, and -v is for verbose output."}
+{"doc":"command name: dmidecode","description":"Display system hardware components, serial numbers, and BIOS version"}
+{"doc":"command name: hdparm -i /dev/sda","description":"Display information about the disk sda"}
+{"doc":"command name: hdparm -tT /dev/sda","description":"Perform a read speed test on the disk sda"}
+{"doc":"command name: badblocks -s /dev/sda","description":"Test for unreadable blocks on the disk sda"}
+{"doc":"command name: df","description":"Display free disk space."}
+{"doc":"command name: du","description":"Show file/folder sizes on disk."}
+{"doc":"command name: du -ah","description":"Disk usage in human readable format (KB, MB etc.)"}
+{"doc":"command name: du -sh","description":"Total disk usage of the current directory"}
+{"doc":"command name: du -h","description":"Free and used space on mounted filesystems"}
+{"doc":"command name: du -i","description":"Free and used inodes on mounted filesystems"}
+{"doc":"command name: fdisk -l","description":"List disk partitions, sizes, and types"}
+{"doc":"command name: free -h","description":"Display free and used memory in human readable units."}
+{"doc":"command name: free -m","description":"Display free and used memory in MB."}
+{"doc":"command name: free -g","description":"Display free and used memory in GB."}
+{"doc":"command name: &","description":"Add this character to the end of a command/process to run it in the background"}
+{"doc":"command name: ps","description":"Show process status. Often used with grep e.g., ps aux | grep python3 displays information on processes involving python3. Meaning of aux: a = show processes for all users u = show user or owner column in output x = show processes not attached to a terminal"}
+{"doc":"command name: ps -e ps -A","description":"Either of these two commands prints all running processes in the system"}
+{"doc":"command name: ps -ef","description":"Print detailed overview"}
+{"doc":"command name: ps -U root -u root","description":"Display all processes running under the account root."}
+{"doc":"command name: ps -eo pid,user,command","description":"Display only the columns pid, user and command in ps output"}
+{"doc":"command name: top","description":"Display sorted information about processes"}
+{"doc":"command name: htop","description":"Display sorted information about processes with visual highlights. It allows you to scroll vertically and horizontally, so you can see every process running on your system and entire commands."}
+{"doc":"command name: atop","description":"Display detailed information about processes and hardware"}
+{"doc":"command name: kill PID","description":"Kill a process specified by its process ID PID, which you obtain using the ps command"}
+{"doc":"command name: killall proc1","description":"Kill all processes containing proc1 in their names"}
+{"doc":"command name: lsof","description":"List all open files on the system. (This command helps you pinpoint what files and processes are preventing you from successfully ejecting an external drive.)"}
+{"doc":"command name: lsof -u root","description":"List all files on the system opened by the root user. As the output can be long, you may use lsof -u root | less to keep this list from taking up space in the terminal output."}
+{"doc":"command name: mpstat 1","description":"Display processor-related statistics, updated every second (hence the 1, whereas mpstat 2 refreshes the output every 2 seconds)"}
+{"doc":"command name: vmstat 1","description":"Display virtual memory statistics (information about memory, system processes, paging, interrupts, block I/O, disk, and CPU scheduling), updated every (1) second"}
+{"doc":"command name: iostat 1","description":"Display system input/output statistics for devices and partitions. virtual memory statistics, updated every (1) second"}
+{"doc":"command name: tail -n 100 /var/log/messages","description":"Display the last 100 lines in the system logs. Replace /var/log/messages with /var/log/syslog for Debian-based systems."}
+{"doc":"command name: tcpdump -i eth0","description":"Capture and display all packets on interface eth0"}
+{"doc":"command name: tcpdump -i eth0 port 80","description":"Monitor all traffic on interface eth0 port 80 (HTTP)"}
+{"doc":"command name: watch df -h","description":"Execute df -h and show periodic updates. To exit, press Ctrl+C."}
+{"doc":"command name: who","description":"Display who is logged in"}
+{"doc":"command name: w","description":"Display what users are online and what they are doing"}
+{"doc":"command name: users","description":"List current users"}
+{"doc":"command name: whoami","description":"Display what user you are logged in as"}
+{"doc":"command name: id","description":"Display the user ID and group IDs of your current user"}
+{"doc":"command name: last","description":"Display the last users who have logged onto the system"}
+{"doc":"command name: groupadd gp1","description":"Create a group named gp1"}
+{"doc":"command name: useradd -c \"Alice Bob\" -m ab1","description":"Create an account named ab1, with a comment of \"Alice Bob\" and create the new user\u2019s home directory"}
+{"doc":"command name: userdel ab1","description":"Delete the account named ab1"}
+{"doc":"command name: usermod -aG gp1 ab1","description":"Add the account ab1 to the group gp1"}
+{"doc":"command name: ifconfig","description":"Display all network interfaces with IP addresses"}
+{"doc":"command name: ifconfig -a","description":"Display all network interfaces, even if any of them is down, with IP addresses"}
+{"doc":"command name: ifconfig eth0","description":"Display IP addresses and details of the eth0 interface"}
+{"doc":"command name: ip a","description":"Another way to display all network interfaces with IP addresses"}
+{"doc":"command name: ethtool eth0","description":"Query or control network driver and hardware settings of the interface eth0"}
+{"doc":"command name: netstat","description":"Print open sockets of network connections, routing tables, interface statistics, masquerade connections, and multicast memberships. Pipe with the less command: e.g., netstat -a | less"}
+{"doc":"command name: netstat -a","description":"Show both listening and non-listening sockets"}
+{"doc":"command name: netstat -l","description":"Show only listening sockets"}
+{"doc":"command name: netstat -nutlp","description":"Show listening TCP and UDP ports and corresponding programs"}
+{"doc":"command name: ping host","description":"Send ICMP echo request to host, which may be a symbolic name, domain name or IP address"}
+{"doc":"command name: whois domain","description":"Display whois information for domain"}
+{"doc":"command name: dig domain","description":"Display DNS information for domain"}
+{"doc":"command name: dig -x addr","description":"Do a reverse lookup on an IPv4 or IPv6 address addr"}
+{"doc":"command name: host domain","description":"Display DNS IP address for domain"}
+{"doc":"command name: wget LINK","description":"Download from location LINK"}
+{"doc":"command name: curl LINK","description":"Display the HTML source of LINK. Check out our curl Cheat Sheet for details."}
