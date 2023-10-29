@@ -56,6 +56,8 @@ Follow the steps to start the bot
 
 ### Step 4: Start interface
 
+Start using the app from the terminal:
+
      python3 pathway_client.py
 
 
