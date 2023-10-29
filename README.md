@@ -56,9 +56,8 @@ Follow the steps to start the bot
 
 ### Step 4: Start interface
 
-    ```
     python3 pathway_client.py
-    ```
+
 
 ### Created using pathway
 Repository used : https://github.com/pathwaycom/llm-app/
