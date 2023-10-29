@@ -56,7 +56,7 @@ Follow the steps to start the app
 
 ### Step 4: Start interface
 
-Start using the app from the terminal:
+Start using the app from a different terminal:
 
      python3 pathway_client.py
 
