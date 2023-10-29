@@ -32,7 +32,7 @@ PATHWAY_CACHE_DIR=/tmp/cache
 
 ### Step 3: Build and run the app
 
-Follow the steps to start the bot 
+Follow the steps to start the app 
 
 
 * **Install poetry:**
