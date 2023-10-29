@@ -32,21 +32,8 @@ PATHWAY_CACHE_DIR=/tmp/cache
 
 ### Step 3: Build and run the app
 
-You can install and run the LLM App in two different ways.
+Follow the steps to start the bot 
 
-#### Using Docker
-
-Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Here is how to use Docker to build and run the LLM App:
-
-```bash
-docker compose run --build --rm -p 8080:8080 llm-app-examples
-```
-
-If you have set a different port in `PATHWAY_REST_CONNECTOR_PORT`, replace the second `8080` with this port in the command above.
-
-When the process is complete, the App will be up and running inside a Docker container and accessible at `0.0.0.0:8080`. From there, you can proceed to the "Usage" section of the documentation for information on how to interact with the application.
-
-#### Native Approach
 
 * **Install poetry:**
 
@@ -69,7 +56,7 @@ When the process is complete, the App will be up and running inside a Docker con
 
 ### Step 4: Start interface
 
-    ```bash
+    ```
     python3 pathway_client.py
     ```
 
