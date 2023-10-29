@@ -9,7 +9,7 @@ Follow these steps to install and get started with our bot.
 This is done with the `git clone` command followed by the URL of the repository:
 
 ```bash
-git clone https://github.com/pathwaycom/llm-app.git
+https://github.com/Arush-Pimpalkar/Transfinitte23_BX1
 ```
 
 Next, navigate to the repository:
