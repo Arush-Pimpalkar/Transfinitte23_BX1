@@ -64,6 +64,5 @@ Start using the app from a different terminal:
 Repository used : https://github.com/pathwaycom/llm-app/
 
 Working Video:
-https://github.com/Arush-Pimpalkar/Transfinitte23_BX1/assets/23013777/ee485aa6-7ed0-4590-a791-799de0be8e21
 
-
+[Jarvis Jr - Working Video](https://github.com/Arush-Pimpalkar/Transfinitte23_BX1/assets/23013777/66e34975-78db-4662-9e08-f859d4798708)
