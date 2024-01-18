@@ -60,11 +60,10 @@ Start using the app from a different terminal:
 
      python3 pathway_client.py
 
-
 ### Created using pathway
 Repository used : https://github.com/pathwaycom/llm-app/
 
 Working Video:
-https://github.com/Arush-Pimpalkar/Transfinitte23_BX1/assets/23013777/12d5b2ca-c398-48ad-936e-fdda2f959653
+https://github.com/Arush-Pimpalkar/Transfinitte23_BX1/assets/23013777/ee485aa6-7ed0-4590-a791-799de0be8e21
 
 
