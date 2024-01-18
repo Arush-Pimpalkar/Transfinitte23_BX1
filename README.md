@@ -65,4 +65,4 @@ Repository used : https://github.com/pathwaycom/llm-app/
 
 Working Video:
 
-[Jarvis Jr - Working Video](https://github.com/Arush-Pimpalkar/Transfinitte23_BX1/assets/23013777/66e34975-78db-4662-9e08-f859d4798708)
+![Jarvis Jr - Working Video](https://github.com/Arush-Pimpalkar/Transfinitte23_BX1/assets/23013777/66e34975-78db-4662-9e08-f859d4798708)
