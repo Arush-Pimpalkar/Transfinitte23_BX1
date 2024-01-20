@@ -4,6 +4,8 @@
 
 This project leverages the capabilities of OpenAI in conjunction with the Pathway framework to establish a secure, localized interface facilitating the execution of Linux commands through prompts in Simple English. The Pathway Framework constructs a dedicated dictionary containing command descriptions, ensuring data confidentiality by conducting searches locally without transmitting any information to OpenAI. This approach is particularly advantageous for developing a secure Command Line Interface (CLI) suitable for beginners and adept users, fostering efficient Linux system interaction.
 
+<img width="859" alt="image" src="https://github.com/Arush-Pimpalkar/Transfinitte23_BX1/assets/23013777/a54c9fe3-9908-4e5e-b717-4747b40bfc4d">
+
 ## Dictionary Creation Methodologies
 
 ### 1. '/usr/bin' and 'man' Algorithms
