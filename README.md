@@ -16,7 +16,7 @@ This project leverages the capabilities of OpenAI in conjunction with the Pathwa
 
 The choice of prioritizing the first method is driven by its inherent capability to yield more precise and reliable responses for users and developers. This meticulous approach ensures the creation of a robust and user-friendly CLI, catering to both novice and experienced Linux users.
 
-Greetings!!
+## Get Started:
 
 Follow these steps to install and get started with our bot.
 
