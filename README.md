@@ -1,5 +1,21 @@
 # Transfinitte23_BX1
 
+## Introduction
+
+This project leverages the capabilities of OpenAI in conjunction with the Pathway framework to establish a secure, localized interface facilitating the execution of Linux commands through prompts in Simple English. The Pathway Framework constructs a dedicated dictionary containing command descriptions, ensuring data confidentiality by conducting searches locally without transmitting any information to OpenAI. This approach is particularly advantageous for developing a secure Command Line Interface (CLI) suitable for beginners and adept users, fostering efficient Linux system interaction.
+
+## Dictionary Creation Methodologies
+
+### 1. '/usr/bin' and 'man' Algorithms
+
+- Development of an algorithm that systematically generates a comprehensive and organized dictionary from locally available commands residing in '/usr/bin' directories and abstracting the description using ‘man’.
+
+### 2. Linux Cheat Sheets
+
+- Implementation of a simplified algorithm utilizing Linux Cheat Sheets accessible on the internet, offering a less intricate alternative.
+
+The choice of prioritizing the first method is driven by its inherent capability to yield more precise and reliable responses for users and developers. This meticulous approach ensures the creation of a robust and user-friendly CLI, catering to both novice and experienced Linux users.
+
 Greetings!!
 
 Follow these steps to install and get started with our bot.
