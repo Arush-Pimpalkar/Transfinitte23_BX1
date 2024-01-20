@@ -18,7 +18,7 @@ The choice of prioritizing the first method is driven by its inherent capability
 
 ## Get Started:
 
-Follow these steps to install and get started with our bot.
+Follow these steps to install and get started:
 
 ### Step 1: Clone the repository
 
